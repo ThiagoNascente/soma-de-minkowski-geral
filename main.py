@@ -39,6 +39,6 @@ if __name__ == "__main__":
         if res[i] == True:
             print('{}'.format(i))
             
-# Complexidade da op: O(sum*k*k*n)
-# Espaco ocupado (dp): O(sum*k)
+# Complexidade da op: O(sum*k*n)
+# Espaco ocupado (dp): O(sum)
 # Sem recursao
