@@ -1,21 +1,21 @@
 # DP para soma de minkowski geral
 
 def MinkowskiSum(matriz, k):
-    sum = 0
+    bigst = 0
     
     for i in range(0, k):
-        sum = sum + max(matriz[i])
+        bigst = bigst + max(matriz[i])
 
-    prev = [False] * (sum + 1)
-    curr = [False] * (sum + 1)
-    aux = [False] * (sum + 1)
+    prev = [False] * (bigst + 1)
+    curr = [False] * (bigst + 1)
+    aux = [False] * (bigst + 1)
     
     for i in matriz[0]:
         prev[i] = True
             
     for z in range(1, k):
         for i in range(0, len(matriz[z])):
-            for j in range(1, sum + 1):
+            for j in range(1, bigst + 1):
                 if prev[j] == True:
                     curr[j+matriz[z][i]] = True
         prev = curr.copy()
@@ -43,6 +43,6 @@ if __name__ == "__main__":
         if res[i] == True:
             print('{}'.format(i))
             
-# Complexidade da op: O(sum*k*n)
-# Espaco ocupado (dp): O(sum)
+# Complexidade da op: O(bigst*k*n)
+# Espaco ocupado (dp): O(bigst)
 # Sem recursao
