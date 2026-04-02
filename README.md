@@ -1,0 +1,1 @@
+Algoritmo geral para calcular soma de minkowski com programação dinâmica
