@@ -10,9 +10,8 @@ def MinkowskiSum(matriz, k):
     curr = [False] * (sum + 1)
     aux = [False] * (sum + 1)
     
-    for i in range(sum + 1):
-        if i in matriz[0]:
-            prev[i] = True
+    for i in matriz[0]:
+        prev[i] = True
             
     for z in range(1, k):
         for i in range(0, len(matriz[z])):
