@@ -24,14 +24,19 @@ def MinkowskiSum(matriz, k):
 
 
 if __name__ == "__main__":
-    V1 = [1,5]
-    V2 = [1,6,9]
-    V3 = [3]
+    #Coleção dos fatores dessa soma de minkowski
+    D = [
+        [1,5],
+        [1,6,9],
+        [1,5,11],
+        [3]
+    ]
+    
     M = []
-    M.append(V1)
-    M.append(V2)
-    M.append(V3)
+    for v in D:
+        M.append(v)
     k = len(M)
+    
     print('Matriz = {}'.format(M))
     res = MinkowskiSum(M, k)
     for i in range(len(res)):
