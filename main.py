@@ -1,7 +1,8 @@
 # DP para soma de minkowski geral
 
-def MinkowskiSum(matriz, k):
+def MinkowskiSum(matriz):
     bigst = 0
+    k = len(matriz)
     
     for i in range(0, k):
         bigst = bigst + max(matriz[i])
@@ -29,16 +30,16 @@ if __name__ == "__main__":
         [1,5],
         [1,6,9],
         [1,5,11],
-        [3]
+        [3],
+        [1,2,3,27,81]
     ]
     
     M = []
     for v in D:
         M.append(v)
-    k = len(M)
     
     print('Matriz = {}'.format(M))
-    res = MinkowskiSum(M, k)
+    res = MinkowskiSum(M)
     for i in range(len(res)):
         if res[i] == True:
             print('{}'.format(i))
