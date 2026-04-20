@@ -15,8 +15,8 @@ def MinkowskiSum(matriz):
         prev[i] = True
             
     for z in range(1, k):
-        for i in range(0, len(matriz[z])):
-            for j in range(1, bigst + 1):
+        for i in range(len(matriz[z])):
+            for j in range(bigst + 1):
                 if prev[j] == True:
                     curr[j+matriz[z][i]] = True
         prev = curr.copy()
